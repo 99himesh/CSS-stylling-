@@ -29,11 +29,13 @@ if(event.target.value.trim().length>0){
       <div className={`form-control ${!isvalid ?'invalid' : ' '}`}>
       {/* <div className={`form-control ${!isvalid  && 'invalid' }`}> */}
         <label>Course Goal</label>
-        <input type="text"onChange={goalInputChangeHandler} />
+        <input type="text"  
+        onChange={goalInputChangeHandler}/>
       </div>
-      <Button type="submit">Add Goal</Button>
+      <div className={`formbtn ${!isvalid ? 'invalid': ''}`}>
+      <Button    type="submit" >Add Goal</Button>
+      </div>
     </form>
   );
 };
-
 export default CourseInput;
